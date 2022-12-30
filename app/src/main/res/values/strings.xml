@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">HW_Android_Lesson1</string>
+    <string name="app_name">NMedia</string>
+    <string name="nmedia">NMedia!</string>
 </resources>
