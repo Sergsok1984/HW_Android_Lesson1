@@ -16,22 +16,22 @@
         app:layout_constraintBottom_toBottomOf="@id/headerBarrier"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        tools:srcCompat="@sample/posts.json/data/avatar" />
 
     <TextView
-        android:id="@+id/authorName"
+        android:id="@+id/author"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:layout_marginEnd="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="@string/authorName"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/postDate"
-        app:layout_constraintEnd_toStartOf="@+id/options"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toTopOf="@+id/avatar"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintEnd_toStartOf="@id/options"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@sample/posts.json/data/author" />
 
     <TextView
         android:id="@+id/postDate"
@@ -42,10 +42,10 @@
         android:layout_marginBottom="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="@string/postDate"
         app:layout_constraintBottom_toBottomOf="@id/headerBarrier"
         app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@+id/authorName" />
+        app:layout_constraintTop_toBottomOf="@+id/author"
+        tools:text="@sample/posts.json/data/postDate" />
 
     <ImageButton
         android:id="@+id/options"
@@ -56,24 +56,25 @@
         android:contentDescription="@string/description_options"
         android:src="@drawable/ic_options_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/avatar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/headerBarrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="avatar, postDate, options, authorName" />
+        app:constraint_referenced_ids="avatar, postDate, options, author" />
 
     <TextView
-        android:id="@+id/mainContent"
-        android:layout_width="0dp"
+        android:id="@+id/contentText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
-        android:text="@string/content_text"
+        android:autoLink="web"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerBarrier" />
+        app:layout_constraintTop_toBottomOf="@+id/headerBarrier"
+        tools:text="@sample/posts.json/data/contentText" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/footerBarrier"
@@ -81,7 +82,7 @@
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
         app:barrierMargin="@dimen/common_spacing"
-        app:constraint_referenced_ids="mainContent" />
+        app:constraint_referenced_ids="contentText" />
 
     <TextView
         android:id="@+id/countViews"
@@ -91,9 +92,9 @@
         android:layout_marginTop="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="@string/countViews"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/footerBarrier" />
+        app:layout_constraintTop_toBottomOf="@+id/footerBarrier"
+        tools:text="@sample/posts.json/data/countViews" />
 
     <ImageButton
         android:id="@+id/iconViews"
@@ -115,9 +116,9 @@
         android:layout_marginTop="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="@string/countLikes"
         app:layout_constraintStart_toEndOf="@+id/iconLikes"
-        app:layout_constraintTop_toBottomOf="@+id/footerBarrier" />
+        app:layout_constraintTop_toBottomOf="@+id/footerBarrier"
+        tools:text="@sample/posts.json/data/countLikes" />
 
     <ImageButton
         android:id="@+id/iconLikes"
@@ -139,9 +140,9 @@
         android:layout_marginTop="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
-        android:text="@string/countReposts"
         app:layout_constraintStart_toEndOf="@+id/iconReposts"
-        app:layout_constraintTop_toBottomOf="@+id/footerBarrier" />
+        app:layout_constraintTop_toBottomOf="@+id/footerBarrier"
+        tools:text="@sample/posts.json/data/countReposts" />
 
     <ImageButton
         android:id="@+id/iconReposts"
