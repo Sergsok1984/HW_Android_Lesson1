@@ -34,14 +34,6 @@ class MainActivity : AppCompatActivity() {
             shareCount?.text = increment(post.share)
             viewsCount?.text = increment(post.views)
 
-            root.setOnClickListener {
-                Log.d("stuff", "stuff")
-            }
-
-            avatar.setOnClickListener {
-                Log.d("stuff", "avatar")
-            }
-
             likes?.setOnClickListener {
                 Log.d("stuff", "like")
                 post.likedByMe = !post.likedByMe
