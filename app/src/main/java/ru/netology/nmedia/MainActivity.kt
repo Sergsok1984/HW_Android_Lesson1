@@ -2,8 +2,6 @@ package ru.netology.nmedia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.TextView
 import ru.netology.nmedia.databinding.ActivityMainBinding
 import kotlin.math.roundToInt
 
@@ -35,7 +33,6 @@ class MainActivity : AppCompatActivity() {
             viewsCount?.text = increment(post.views)
 
             likes?.setOnClickListener {
-                Log.d("stuff", "like")
                 post.likedByMe = !post.likedByMe
                 likes.setImageResource(
                     if (post.likedByMe) R.drawable.ic_liked_24dp else R.drawable.ic_likes_24dp
@@ -44,12 +41,10 @@ class MainActivity : AppCompatActivity() {
                 likesCount?.text = increment(post.likes)
             }
             share?.setOnClickListener {
-                Log.d("stuff", "share")
                 post.share++
                 shareCount?.text = increment(post.share)
             }
             views?.setOnClickListener {
-                Log.d("stuff", "view")
                 post.views++
                 viewsCount?.text = increment(post.views)
             }
