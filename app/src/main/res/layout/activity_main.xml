@@ -99,7 +99,7 @@
         tools:text="@sample/posts.json/data/viewsCount" />
 
     <ImageButton
-        android:id="@+id/views"
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
