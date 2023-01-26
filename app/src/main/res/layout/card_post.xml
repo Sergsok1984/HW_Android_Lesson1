@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="@dimen/common_spacing"
     tools:context=".MainActivity">
 
@@ -97,7 +97,7 @@
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/footerBarrier"
-        tools:text="@sample/posts.json/data/viewCount" />
+        tools:text="@sample/posts.json/data/viewsCount" />
 
     <ImageButton
         android:id="@+id/view"
