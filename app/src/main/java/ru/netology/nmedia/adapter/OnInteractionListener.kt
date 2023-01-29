@@ -8,5 +8,4 @@ interface OnInteractionListener {
     fun onRemove(post: Post) {}
     fun onShare(post: Post) {}
     fun onView(post: Post) {}
-    fun onCancel() {}
 }
