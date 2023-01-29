@@ -2,9 +2,16 @@
     <string name="app_name">NMedia</string>
     <string name="nmedia">NMedia!</string>
     <string name="netology">Netology</string>
-    <string name="description_options" translatable="false">Options</string>
-    <string name="description_icon_views" translatable="false">iconViews</string>
-    <string name="description_icon_likes" translatable="false">iconLikes</string>
-    <string name="description_icon_reposts" translatable="false">iconReposts</string>
+    <string name="description_options">Options</string>
+    <string name="description_icon_views">iconViews</string>
+    <string name="description_icon_likes">iconLikes</string>
+    <string name="description_icon_reposts">iconReposts</string>
+    <string name="description_post_save">Save</string>
+    <string name="description_post_edit">Edit</string>
+    <string name="menu_remove">Remove</string>
+    <string name="post_text">Post Text</string>
+    <string name="menu_edit">Edit</string>
+    <string name="error_empty_content">Content can\'t be empty</string>
+    <string name="description_cancel">Cancel</string>
 </resources>
 
