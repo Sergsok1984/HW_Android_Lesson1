@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         initView()
         subscribe()
         setupListeners()
+        cancel()
     }
 
     private fun initView() {
@@ -58,6 +59,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.data.observe(this) { posts ->
             adapter.submitList(posts)
         }
+//        binding.cancelEdit.setOnClickListener {
+//            viewModel.cancel()
+//        }
 
         viewModel.edited.observe(this) { post ->
             if (post.id != 0L) {
@@ -66,9 +70,16 @@ class MainActivity : AppCompatActivity() {
                     setText(post.content)
                     AndroidUtils.showKeyboard(this)
                 }
+            } else {
+                with(binding.editText) {
+                    setText("")
+                    clearFocus()
+                    AndroidUtils.hideKeyboard(this)
+                }
             }
         }
     }
+
 
     private fun setupListeners() {
         binding.save.setOnClickListener {
@@ -89,9 +100,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
 
+
+    private fun cancel() {
         binding.cancelEdit.setOnClickListener {
             with(binding.editText) {
+                viewModel.cancel()
                 binding.editGroup.visibility = View.GONE
                 setText("")
                 clearFocus()
@@ -100,3 +115,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
+
+

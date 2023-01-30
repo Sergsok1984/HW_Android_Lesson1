@@ -15,7 +15,7 @@ import kotlin.math.roundToInt
 
 class PostsAdapter(
     private val onInteractionListener: OnInteractionListener,
-    ) : ListAdapter<Post, PostViewHolder>(PostViewHolder.PostDiffCallback()) {
+) : ListAdapter<Post, PostViewHolder>(PostViewHolder.PostDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding = CardPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PostViewHolder(binding, onInteractionListener)
