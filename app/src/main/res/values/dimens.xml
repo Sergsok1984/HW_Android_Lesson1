@@ -8,4 +8,8 @@
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_counter">8dp</dimen>
     <dimen name="action_size">24dp</dimen>
+    <dimen name="checkbox_padding_start">8dp</dimen>
+    <dimen name="icon_button_padding">12dp</dimen>
+    <dimen name="icon_button_min_size">48dp</dimen>
+    <dimen name="margin_view">14dp</dimen>
 </resources>
