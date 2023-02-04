@@ -3,116 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/toolsTop"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/card_post" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/toolsTop"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="editText, save" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:hint="@string/post_text"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:padding="@dimen/common_spacing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/save"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolsTop"
-        tools:ignore="VisualLintTextFieldSize" />
-
-    <ImageButton
-        android:id="@+id/save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_spacing"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/description_post_save"
+        android:layout_margin="@dimen/common_spacing"
+        android:contentDescription="@string/add_post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/editText"
-        app:srcCompat="@drawable/ic_save_48" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/editBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="cancelEdit, editMessageField, editPencil" />
-
-    <TextView
-        android:id="@+id/editMessageField"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/edit_field_height"
-        android:background="@android:color/white"
-        android:paddingStart="@dimen/edit_padding_start"
-        android:text="@string/edit_message"
-        android:textColor="#61b1e8"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/editContentPreview"
-        app:layout_constraintEnd_toEndOf="@id/save"
-        app:layout_constraintStart_toStartOf="@id/editPencil"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/editContentPreview"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/edit_field_height"
-        android:layout_marginEnd="48dp"
-        android:background="@android:color/white"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:paddingStart="@dimen/edit_padding_start"
-        android:text="@sample/posts.json/data/content"
-        app:layout_constraintEnd_toEndOf="@id/save"
-        app:layout_constraintStart_toStartOf="@id/editPencil"
-        app:layout_constraintTop_toBottomOf="@id/editMessageField" />
-
-    <ImageView
-        android:id="@+id/editPencil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_spacing"
-        android:background="@android:color/white"
-        android:paddingStart="12dp"
-        android:paddingBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_edit_24" />
-
-    <ImageButton
-        android:id="@+id/cancelEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@id/editText"
-        app:layout_constraintStart_toStartOf="@id/save"
-        app:srcCompat="@drawable/ic_cancel_24"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/editGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="editBarrier, editMessageField,
-            editPencil, cancelEdit, editContentPreview" />
-
+        app:srcCompat="@drawable/ic_add_24dp"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

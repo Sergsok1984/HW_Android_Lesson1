@@ -54,7 +54,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/common_spacing"
-        android:checkable="true"
         android:contentDescription="@string/description_options"
         app:icon="@drawable/ic_options_24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +74,6 @@
         android:layout_marginTop="@dimen/common_spacing"
         android:autoLink="web"
         android:lineSpacingMultiplier="1"
-        android:paddingTop="@dimen/common_spacing"
         android:paddingBottom="@dimen/common_spacing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +81,43 @@
         tools:ignore="VisualLintLongText"
         tools:text="@sample/posts.json/data/content" />
 
+    <ImageView
+        android:id="@+id/video_preview"
+        android:layout_width= "match_parent"
+        android:layout_height="@dimen/video_height"
+        android:layout_marginBottom="@dimen/common_spacing"
+        android:contentDescription="@string/video"
+        android:src="@drawable/video"
+        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/video_preview"
+        app:layout_constraintRight_toRightOf="@id/video_preview"
+        app:layout_constraintTop_toTopOf="@id/video_preview"
+        app:layout_constraintBottom_toBottomOf="@id/video_preview"
+        android:checkable="true"
+        android:contentDescription="@string/video"
+        app:icon="@drawable/ic_play_48dp"
+        style="@style/Widget.AppTheme.PlayButton"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/videoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="video_preview,play" />
+
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/footerBarrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="content" />
+        app:constraint_referenced_ids="video_preview" />
 
 
     <com.google.android.material.button.MaterialButton
