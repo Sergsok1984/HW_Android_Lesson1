@@ -72,9 +72,7 @@ class PostViewHolder(
                     }
                 }.show()
             }
-            if (post.video != null) {
-                videoGroup.visibility = View.VISIBLE
-            }
+            videoGroup.visibility = if (post.video.isBlank()) View.GONE else View.VISIBLE
 
             play.setOnClickListener {
                 onInteractionListener.onPlay(post)
