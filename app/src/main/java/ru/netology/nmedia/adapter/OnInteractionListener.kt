@@ -9,4 +9,6 @@ interface OnInteractionListener {
     fun onShare(post: Post) {}
     fun onView(post: Post) {}
     fun onPlay(post: Post) {}
+    fun onPostFragment(post: Post) {}
 }
+

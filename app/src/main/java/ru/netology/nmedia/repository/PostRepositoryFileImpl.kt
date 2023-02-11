@@ -99,7 +99,6 @@ class PostRepositoryFilesImpl(private val context: Context) : PostRepository {
             }
         }
         data.value = posts
-        sync()
     }
 
     override fun likeById(id: Long) {
@@ -110,7 +109,6 @@ class PostRepositoryFilesImpl(private val context: Context) : PostRepository {
             )
         }
         data.value = posts
-        sync()
     }
 
     override fun shareById(id: Long) {
@@ -118,7 +116,6 @@ class PostRepositoryFilesImpl(private val context: Context) : PostRepository {
             if (it.id != id) it else it.copy(share = it.share + 1)
         }
         data.value = posts
-        sync()
     }
 
     override fun viewById(id: Long) {
@@ -126,13 +123,11 @@ class PostRepositoryFilesImpl(private val context: Context) : PostRepository {
             if (it.id != id) it else it.copy(views = it.views + 1)
         }
         data.value = posts
-        sync()
     }
 
     override fun removeById(id: Long) {
         posts = posts.filter { it.id != id }
         data.value = posts
-        sync()
     }
 
     private fun sync() {

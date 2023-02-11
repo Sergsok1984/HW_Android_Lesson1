@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/add_post"
         app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@drawable/ic_add_24dp" />
+        app:srcCompat="@drawable/ic_check_24"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
