@@ -21,7 +21,7 @@
         android:theme="@style/Theme.HW_Android_NMedia"
         tools:targetApi="33">
         <activity
-            android:name=".NewPostFragment"
+            android:name=".activity.NewPostFragment"
             android:exported="false" />
         <activity
             android:name=".activity.AppActivity"
