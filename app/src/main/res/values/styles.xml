@@ -33,5 +33,9 @@
         <item name="android:minHeight">@dimen/icon_button_min_size</item>
     </style>
 
+    <style name="Widget.AppTheme.BottomAppBarCustom" parent="Widget.MaterialComponents.BottomAppBar.Colored">
+        <item name="backgroundTint">@color/purple_500</item>
+    </style>
+
 
 </resources>
