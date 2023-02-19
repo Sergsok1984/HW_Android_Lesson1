@@ -28,7 +28,7 @@ class PostFragment : Fragment() {
         val binding = FragmentPostBinding.inflate(inflater, container, false)
         val viewModel by viewModels<PostViewModel>(ownerProducer = ::requireParentFragment)
 
-        val viewHolder = PostViewHolder(binding.post, object : OnInteractionListener {
+        val viewHolder = PostViewHolder(binding.post, object: OnInteractionListener {
             override fun onEdit(post: Post) {
                 viewModel.edit(post)
                 findNavController().navigate(R.id.action_postFragment_to_newPostFragment,

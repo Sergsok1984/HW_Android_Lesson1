@@ -5,9 +5,9 @@ data class Post(
     val author: String,
     val content: String,
     val published: String,
-    val likes: Long = 999,
-    val share: Long = 1099,
-    val views: Long = 999999,
     val likedByMe: Boolean,
-    var video: String = ""
+    var likes: Long = 999,
+    var views: Long = 999999,
+    var share: Long = 1099,
+    var video: String = "https://youtu.be/"
 )
